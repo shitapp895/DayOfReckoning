@@ -13,6 +13,14 @@ root.render(
   </React.StrictMode>
 );
 
+// Make the root element visible once React has loaded
+setTimeout(() => {
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.style.opacity = '1';
+  }
+}, 100);
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
