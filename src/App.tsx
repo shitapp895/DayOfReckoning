@@ -146,6 +146,7 @@ function App() {
           {phrases[currentPhraseIndex]}
         </div>
       </div>
+      <div className="sponsor-tag">Shitapp x PYRE</div>
     </div>
   );
 }

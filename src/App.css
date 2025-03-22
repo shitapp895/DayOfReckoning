@@ -272,6 +272,31 @@
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
 }
 
+.sponsor-tag {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  color: rgba(220, 220, 220, 0.6);
+  letter-spacing: 1.2px;
+  z-index: 10;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 3px;
+  background-color: rgba(20, 0, 0, 0.5);
+  border-left: 2px solid rgba(255, 0, 0, 0.4);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+.sponsor-tag:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(30, 0, 0, 0.7);
+  border-left: 2px solid rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
