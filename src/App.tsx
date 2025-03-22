@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import BackgroundEffects from './components/BackgroundEffects';
-import AudioEffects from './components/AudioEffects';
 
 function App() {
   // Set the target date for the "Day of Reckoning" - next Monday at 8PM
@@ -26,6 +25,26 @@ function App() {
     minutes: 0,
     seconds: 0
   });
+
+  // Array of phrases to cycle through
+  const phrases = [
+    "The time draws near...",
+    "There is no escape...",
+    "Prepare yourself...",
+    "The darkness approaches...",
+    "The end begins...",
+    "Judgement awaits us all...",
+    "Your sins have been counted...",
+    "The veil between worlds thins...",
+    "The abyss stares back...",
+    "Salvation is beyond reach...",
+    "The final hour comes...",
+    "Death rides with haste...",
+    "Your soul will be weighed..."
+  ];
+
+  // State to track the current phrase index
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -60,6 +79,16 @@ function App() {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  // Effect to cycle through phrases every 5 seconds
+  useEffect(() => {
+    const phraseInterval = setInterval(() => {
+      setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 5000);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(phraseInterval);
+  }, [phrases.length]);
+
   // Check if the day of reckoning has arrived
   const isReckoning = timeLeft.days === 0 && timeLeft.hours === 0 && 
                      timeLeft.minutes === 0 && timeLeft.seconds === 0;
@@ -80,7 +109,7 @@ function App() {
               <div className="wick"></div>
             </div>
           </div>
-          <h1 className="title">THE DAY OF RECKONING</h1>
+          <h1 className="title">DAY OF RECKONING</h1>
           <div className="candle-container right">
             <div className="candle right-candle">
               <div className="flame"></div>
@@ -114,10 +143,9 @@ function App() {
         </div>
         
         <div className="message">
-          JUDGEMENT AWAITS US ALL...
+          {phrases[currentPhraseIndex]}
         </div>
       </div>
-      <AudioEffects />
     </div>
   );
 }
