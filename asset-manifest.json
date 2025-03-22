@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DayOfReckoning/static/css/main.4b8788ca.css",
-    "main.js": "/DayOfReckoning/static/js/main.6e92f140.js",
+    "main.js": "/DayOfReckoning/static/js/main.c5ba80d7.js",
     "static/js/453.bca60678.chunk.js": "/DayOfReckoning/static/js/453.bca60678.chunk.js",
     "index.html": "/DayOfReckoning/index.html",
     "main.4b8788ca.css.map": "/DayOfReckoning/static/css/main.4b8788ca.css.map",
-    "main.6e92f140.js.map": "/DayOfReckoning/static/js/main.6e92f140.js.map",
+    "main.c5ba80d7.js.map": "/DayOfReckoning/static/js/main.c5ba80d7.js.map",
     "453.bca60678.chunk.js.map": "/DayOfReckoning/static/js/453.bca60678.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b8788ca.css",
-    "static/js/main.6e92f140.js"
+    "static/js/main.c5ba80d7.js"
   ]
 }
